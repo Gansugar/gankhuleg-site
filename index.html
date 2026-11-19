@@ -7,7 +7,7 @@
 <meta name="description" content="Монгол Улсын Их Хурлын гишүүн Мөнгөнцогийн Ганхүлэгийн албан ёсны вэбсайт. Сүхбаатар, Дорнод, Хэнтий аймаг.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#0B2545;
@@ -27,18 +27,17 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+body{font-family:"Noto Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
-.serif{font-family:"Playfair Display",Georgia,serif}
+.serif{font-family:Montserrat,sans-serif}
 .key-strip{height:14px;background:var(--key) repeat-x center/28px 14px}
 
 /* ---------- Header ---------- */
 .site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
-.brand-mark{width:40px;height:40px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:700;font-family:"Playfair Display",serif;font-size:18px;flex:none}
 .brand-text{display:flex;flex-direction:column;line-height:1.2;min-width:0}
 .brand-text strong{font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .brand-text span{font-size:12px;color:var(--muted)}
@@ -56,7 +55,7 @@ a{color:inherit}
 .hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:72px}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
 .eyebrow::before{content:"";width:28px;height:2px;background:var(--gold)}
-.hero h1{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,58px);line-height:1.08;margin:16px 0 8px}
+.hero h1{font-family:Montserrat,sans-serif;font-weight:800;letter-spacing:-.01em;font-size:clamp(34px,4.6vw,54px);line-height:1.1;margin:16px 0 8px}
 .hero .lead{font-size:20px;color:#DCE3EE;margin-bottom:24px;font-weight:500}
 .letter{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-left:4px solid var(--red);border-radius:var(--radius);padding:22px 24px;color:#E8EDF5;font-size:15px}
 .letter p+p{margin-top:10px}
@@ -81,7 +80,7 @@ section{padding:88px 0}
 .section-head{max-width:640px;margin-bottom:44px}
 .section-head .eyebrow{color:var(--red)}
 .section-head .eyebrow::before{background:var(--red)}
-.section-head h2{font-family:"Playfair Display",serif;font-size:clamp(28px,3.4vw,40px);line-height:1.15;margin-top:10px;color:var(--navy)}
+.section-head h2{font-family:Montserrat,sans-serif;font-size:clamp(28px,3.4vw,40px);line-height:1.15;margin-top:10px;color:var(--navy)}
 .section-head p{color:var(--muted);margin-top:12px}
 
 /* Constituency */
@@ -90,7 +89,7 @@ section{padding:88px 0}
 .province{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px 28px;text-align:center;box-shadow:var(--shadow);transition:transform .2s}
 .province:hover{transform:translateY(-4px)}
 .province img{height:150px;width:auto;margin:0 auto 20px;object-fit:contain}
-.province h3{font-family:"Playfair Display",serif;font-size:22px;color:var(--navy)}
+.province h3{font-family:Montserrat,sans-serif;font-size:22px;color:var(--navy)}
 .province span{display:block;font-size:13px;color:var(--muted);margin-top:4px}
 
 /* About */
@@ -130,7 +129,7 @@ section{padding:88px 0}
 .info-item small{display:block;font-size:12px;color:#9FB0C8;text-transform:uppercase;letter-spacing:.06em}
 .info-item a,.info-item div>span{font-weight:600;text-decoration:none;word-break:break-word}
 form{background:#fff;color:var(--ink);border-radius:var(--radius);padding:28px;display:grid;gap:14px}
-form h3{font-family:"Playfair Display",serif;font-size:22px;color:var(--navy)}
+form h3{font-family:Montserrat,sans-serif;font-size:22px;color:var(--navy)}
 label{font-size:13px;font-weight:600;display:block;margin-bottom:6px}
 input,textarea{width:100%;font:inherit;font-size:15px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
 input:focus,textarea:focus{outline:2px solid var(--gold);border-color:transparent;background:#fff}
@@ -165,7 +164,6 @@ footer{background:#071A33;color:#9FB0C8;padding:40px 0 28px;font-size:14px}
 <header class="site-header">
   <div class="wrap">
     <a href="#top" class="brand">
-      <div class="brand-mark">Г</div>
       <div class="brand-text"><strong data-k="home.name"></strong><span data-k="home.badge"></span></div>
     </a>
     <nav class="nav" aria-label="Цэс">
@@ -298,7 +296,6 @@ footer{background:#071A33;color:#9FB0C8;padding:40px 0 28px;font-size:14px}
   });
   document.title=d.home.name;
   document.getElementById('year').textContent=new Date().getFullYear();
-  var mark=document.querySelector('.brand-mark'); if(d.home.name){ var parts=d.home.name.trim().split(/\s+/); mark.textContent=(parts[parts.length-1]||'')[0]||''; }
 
   var letter=document.getElementById('letter');
   paras(d.home.letter).concat(paras(d.home.signoff)).forEach(function(p){ letter.appendChild(p); });
