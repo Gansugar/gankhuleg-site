@@ -1,8 +1,10 @@
 # Decap CMS settings: what the admin panel at /admin can edit.
-# Admins log in with Netlify Identity (email invite); every save is committed to the Git repo
-# and Netlify republishes the site in about a minute.
+# Admins log in with their own (free) GitHub account through Netlify's free GitHub OAuth provider.
+# Only people added as collaborators on the repository can save. Every save is committed to the
+# repo and Netlify republishes the site in about a minute.
 backend:
-  name: git-gateway
+  name: github
+  repo: Gansugar/gankhuleg-site
   branch: main
 
 media_folder: images  # where uploaded photos are stored in the repo
