@@ -1,0 +1,64 @@
+# Decap CMS settings: what the admin panel at /admin can edit.
+# Admins log in with Netlify Identity (email invite); every save is committed to the Git repo
+# and Netlify republishes the site in about a minute.
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: images  # where uploaded photos are stored in the repo
+public_folder: /images
+
+collections:
+  - name: pages
+    label: "Хуудсууд"
+    editor: { preview: false }
+    files:
+      - name: home
+        label: "Нүүр хуудас"
+        file: content/home.json
+        fields:
+          - { name: name, label: "Нэр", widget: string }
+          - { name: badge, label: "Албан тушаал (дээд талын тэмдэг)", widget: string }
+          - { name: heading, label: "Улаан хайрцгийн гарчиг", widget: string }
+          - { name: letter, label: "Мэндчилгээ захидал (догол мөрийг хоосон мөрөөр тусгаарлана)", widget: text }
+          - { name: signoff, label: "Төгсгөлийн үг", widget: text }
+          - { name: portrait, label: "Гол зураг", widget: image }
+
+      - name: about
+        label: "Миний тухай"
+        file: content/about.json
+        fields:
+          - { name: photo, label: "Зураг", widget: image }
+          - { name: bio, label: "Намтар (догол мөрийг хоосон мөрөөр тусгаарлана)", widget: text }
+          - name: facts
+            label: "Товч мэдээлэл"
+            label_singular: "мөр"
+            widget: list
+            fields:
+              - { name: text, label: "Текст", widget: string }
+
+      - name: news
+        label: "Мэдээ"
+        file: content/news.json
+        fields:
+          - name: posts
+            label: "Мэдээнүүд (дээрх нь эхэнд харагдана)"
+            label_singular: "мэдээ"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Гарчиг", widget: string }
+              - { name: date, label: "Огноо", widget: datetime, time_format: false, date_format: "YYYY.MM.DD", format: "YYYY-MM-DD", required: false }
+              - { name: image, label: "Зураг", widget: image, required: false }
+              - { name: body, label: "Агуулга", widget: text }
+              - { name: link, label: "Холбоос (жишээ нь Facebook пост)", widget: string, required: false }
+
+      - name: contact
+        label: "Холбоо барих"
+        file: content/contact.json
+        fields:
+          - { name: email, label: "И-мэйл", widget: string }
+          - { name: phone, label: "Утас / WhatsApp", widget: string }
+          - { name: address, label: "Хаяг", widget: string }
+          - { name: area, label: "Тойрог", widget: string }
+          - { name: facebook, label: "Facebook хаяг", widget: string }
